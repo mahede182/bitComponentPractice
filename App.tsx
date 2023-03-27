@@ -30,6 +30,7 @@ import ListViewComponentPractice from './components/ListViewComponentPractice';
 import DrawerComponentPractice from './components/DrawerComponentPractice';
 import PermissionComponentPractice from './components/PermissionComponentPractice';
 import ToastComponentPractice from './components/ToastComponentPractice';
+import ActivityIndicatorComponentPractice from './components/ActivityIndicatorComponentPractice';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -49,7 +50,8 @@ function App(): JSX.Element {
       {/* <ListViewComponentPractice /> */}
       {/* <DrawerComponentPractice /> */}
       {/* <PermissionComponentPractice /> */}
-      <ToastComponentPractice />
+      {/* <ToastComponentPractice /> */}
+      <ActivityIndicatorComponentPractice />
     </>
   );
 }

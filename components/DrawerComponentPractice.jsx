@@ -7,37 +7,44 @@ import {
   View,
 } from 'react-native';
 
+
 const DrawerComponentPractice = () =>{
     const drawer = useRef(null);
     const [drawerPosition, setDrawerPosition] = useState('left');
 
-    const changeDrawerPosition = () => {
-        if (drawerPosition === 'left') {
-          setDrawerPosition('right');
-        } else {
-          setDrawerPosition('left');
-        }
-      };
-    
-      const navigationView = () => (
-        <View style={[styles.container, styles.navigationContainer]}>
-          <Text style={styles.paragraph}>I'm in the Drawer!</Text>
-          <Button
-            title="Close drawer"
-            onPress={() => drawer.current.closeDrawer()}
-          />
-        </View>
-      );
-    
+    // change drawer functionality
+const changeDrawerPosition = () => {
+    if (drawerPosition === 'left') {
+        setDrawerPosition('right');
+    } else {
+        setDrawerPosition('left');
+    }
+};
+
+    // change navigation view.
+const navigationView = () => (
+<View style={[styles.container, styles.navigationContainer]}>
+    <Text style={styles.paragraph}>Home</Text>
+    <Text style={styles.paragraph}>Menu</Text>
+    <Text style={styles.paragraph}>Blog</Text>
+    <Text style={styles.paragraph}>About</Text>
+    <Button
+    title="Close drawer"
+    onPress={() => drawer.current.closeDrawer()}
+    />
+</View>
+);
+
     return(
     <>
         <DrawerLayoutAndroid
+        drawerBackgroundColor="rgba(58,20,10,0.4)"
         ref={drawer}
         drawerWidth={300}
         drawerPosition={drawerPosition}
         renderNavigationView={navigationView}>
             <View style={styles.container}>
-                <Text style={styles.paragraph}>Drawer on the {drawerPosition}!</Text>
+                <Text style={styles.paragraph}>Drawer is on {drawerPosition}!</Text>
                 <Button
                 title="Change Drawer Position"
                 onPress={() => changeDrawerPosition()}

@@ -27,6 +27,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import ListViewComponentPractice from './components/ListViewComponentPractice';
+import DrawerComponentPractice from './components/DrawerComponentPractice';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -43,7 +44,8 @@ function App(): JSX.Element {
     <>
       {/* <BasicComponentPractice /> */}
       {/* <UserInterfacePractice /> */}
-      <ListViewComponentPractice />
+      {/* <ListViewComponentPractice /> */}
+      <DrawerComponentPractice />
     </>
   );
 }

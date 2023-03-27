@@ -31,6 +31,9 @@ import DrawerComponentPractice from './components/DrawerComponentPractice';
 import PermissionComponentPractice from './components/PermissionComponentPractice';
 import ToastComponentPractice from './components/ToastComponentPractice';
 import ActivityIndicatorComponentPractice from './components/ActivityIndicatorComponentPractice';
+import AnimationComponentPractice from './components/AnimationComponentPractice';
+import KeyboardAvoidingViewComponent from './components/KeyboardAvoidingViewComponentPractice';
+import TextInputComponentPractice from './components/TextInputComponentPractice';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -51,7 +54,10 @@ function App(): JSX.Element {
       {/* <DrawerComponentPractice /> */}
       {/* <PermissionComponentPractice /> */}
       {/* <ToastComponentPractice /> */}
-      <ActivityIndicatorComponentPractice />
+      {/* <ActivityIndicatorComponentPractice /> */}
+      {/* <AnimationComponentPractice /> */}
+      {/* <KeyboardAvoidingViewComponent /> */}
+      <TextInputComponentPractice />
     </>
   );
 }

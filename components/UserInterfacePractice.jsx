@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import {
   StyleSheet,
   Button,
@@ -6,6 +6,7 @@ import {
   SafeAreaView,
   Text,
   Alert,
+  Switch
 } from 'react-native';
 
 const Separator = () => <View style={styles.separator} />;

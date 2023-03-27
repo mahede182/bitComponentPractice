@@ -55,9 +55,9 @@ function App(): JSX.Element {
       {/* <UserInterfacePractice /> */}
       {/* <ListViewComponentPractice /> */}
       {/* <DrawerComponentPractice /> */}
-      {/* <PermissionComponentPractice /> */}
+      <PermissionComponentPractice />
       {/* <ToastComponentPractice /> */}
-      <ActivityIndicatorComponentPractice />
+      {/* <ActivityIndicatorComponentPractice /> */}
       {/* <AnimationComponentPractice /> */}
       {/* <KeyboardAvoidingViewComponent /> */}
       {/* <TextInputComponentPractice /> */}

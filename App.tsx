@@ -36,6 +36,7 @@ import KeyboardAvoidingViewComponent from './components/KeyboardAvoidingViewComp
 import TextInputComponentPractice from './components/TextInputComponentPractice';
 import ModalComponentPractice from './components/ModalComponentPractice';
 import RefreshControllComponentPractice from './components/RefreshControllComponentPractice';
+import StatusBarComponentPractice from './components/StatusBarComponentPractice';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -56,12 +57,13 @@ function App(): JSX.Element {
       {/* <DrawerComponentPractice /> */}
       {/* <PermissionComponentPractice /> */}
       {/* <ToastComponentPractice /> */}
-      {/* <ActivityIndicatorComponentPractice /> */}
+      <ActivityIndicatorComponentPractice />
       {/* <AnimationComponentPractice /> */}
       {/* <KeyboardAvoidingViewComponent /> */}
       {/* <TextInputComponentPractice /> */}
       {/* <ModalComponentPractice /> */}
-      <RefreshControllComponentPractice />
+      {/* <RefreshControllComponentPractice /> */}
+      {/* <StatusBarComponentPractice /> */}
     </>
   );
 }

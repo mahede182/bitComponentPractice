@@ -34,6 +34,7 @@ import ActivityIndicatorComponentPractice from './components/ActivityIndicatorCo
 import AnimationComponentPractice from './components/AnimationComponentPractice';
 import KeyboardAvoidingViewComponent from './components/KeyboardAvoidingViewComponentPractice';
 import TextInputComponentPractice from './components/TextInputComponentPractice';
+import ModalComponentPractice from './components/ModalComponentPractice';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -57,7 +58,8 @@ function App(): JSX.Element {
       {/* <ActivityIndicatorComponentPractice /> */}
       {/* <AnimationComponentPractice /> */}
       {/* <KeyboardAvoidingViewComponent /> */}
-      <TextInputComponentPractice />
+      {/* <TextInputComponentPractice /> */}
+      <ModalComponentPractice />
     </>
   );
 }

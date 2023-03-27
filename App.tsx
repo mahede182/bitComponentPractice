@@ -8,6 +8,7 @@ import type {PropsWithChildren} from 'react';
 import { NativeBaseProvider, Text, Box, Button, VStack, Skeleton } from "native-base";
 
 import BasicComponentPractice from './components/BasicComponentPractice';
+import UserInterfacePractice from './components/UserInterfacePractice';
 
 import {
   SafeAreaView,
@@ -25,6 +26,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import ListViewComponentPractice from './components/ListViewComponentPractice';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -39,7 +41,9 @@ function App(): JSX.Element {
   
   return (
     <>
-      <BasicComponentPractice />
+      {/* <BasicComponentPractice /> */}
+      {/* <UserInterfacePractice /> */}
+      <ListViewComponentPractice />
     </>
   );
 }

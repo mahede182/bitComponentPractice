@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet, Image,TextInput, SafeAreaView, ScrollView} from 'react-native';
+import {View, Text, StyleSheet, Image ,TextInput, SafeAreaView, ScrollView, Button, Alert} from 'react-native';
 
 function BasicComponentPractice(){
     const [text, onChangeText] = React.useState('Useless Text');
@@ -17,12 +17,14 @@ function BasicComponentPractice(){
         <View style={styles.cardContainer}>
             <Text style={styles.heading}>Image - Component</Text>
             <Text>A component for displaying image</Text>
-            <Text style={{color: 'red'}}>Struggling to added image.</Text>
+            
+            <Image source = {require('P:/bit/images/logo.png')} style = {{ width: 100, height: 100}}/>
         </View>
         {/* ======Text input==== */}
         <View style={styles.cardContainer}>
             <Text style={styles.heading}>Text Input - Component</Text>
             <Text>A component for inputting text</Text>
+            
             <TextInput
                 style={styles.input}
                 value={text}
@@ -33,6 +35,13 @@ function BasicComponentPractice(){
                 placeholder="useless placeholder"
                 keyboardType="numeric"
             />
+        </View>
+        {/* ======Style sheet==== */}
+        <View style={styles.cardContainer}>
+            <Text style={styles.heading}>Stylesheet - Component</Text>
+            <Text>A component for styled your component</Text>
+            <Text>Method: compose(), create(), flatten()</Text>
+            <Text>Properties: absoluteFill, absoluteFillObject, hairlineWidth</Text>
         </View>
         {/* ======scroll view====== */}
         <SafeAreaView style={styles.cardContainer}>
@@ -62,6 +71,11 @@ function BasicComponentPractice(){
                 </Text>
             </ScrollView>
         </SafeAreaView>
+        <Button
+          title="here User Interface component"
+          onPress={() => Alert.alert('user interface button pressed')}
+          style={{flexDirection: 'row',alignItems:'flex-end' , justifyContent: 'end'}}
+        />
     </View>
         </>
     )

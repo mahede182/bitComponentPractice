@@ -2,10 +2,11 @@
  * Sample React Native App
  * https://github.com/facebook/react-native
  */
+import { Platform } from 'react-native';
+import { Button, lightColors, createTheme, ThemeProvider } from '@rneui/themed';
 
 import React,{useState} from 'react';
 import type {PropsWithChildren} from 'react';
-import { NativeBaseProvider, Text, Box, Button, VStack, Skeleton } from "native-base";
 
 import BasicComponentPractice from './components/BasicComponentPractice';
 import UserInterfacePractice from './components/UserInterfacePractice';
@@ -26,6 +27,9 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+
+// Stand alone practice in official react native site.
+
 import ListViewComponentPractice from './components/ListViewComponentPractice';
 import DrawerComponentPractice from './components/DrawerComponentPractice';
 import PermissionComponentPractice from './components/PermissionComponentPractice';
@@ -41,10 +45,20 @@ import BgComponent from './components/ImageComponent/BgComponent';
 import PressableComponentPractice from './components/PressableComponent/PressableComponentPractice';
 import TouchableHighlightComponentPractice from './components/TouchableComponent/TouchableHighlightComponentPractice';
 import VirtualizedListComponent from './components/TouchableComponent/VirtualizedListComponentPractice';
+import BadgeComponentPractice from './components/NativeElementBaseComponent/BadgeComponentPractice';
 
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
+
+const theme = createTheme({
+  lightColors: {
+    ...Platform.select({
+      default: lightColors.platform.android,
+      ios: lightColors.platform.ios,
+    }),
+  },
+});
 
 function App(): JSX.Element {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -71,7 +85,13 @@ function App(): JSX.Element {
       {/* <BgComponent /> */}
       {/* <PressableComponentPractice /> */}
       {/* <TouchableHighlightComponentPractice /> */}
-      <VirtualizedListComponent />
+      {/* <VirtualizedListComponent /> */}
+
+    <ThemeProvider theme={theme}>
+      {/* This button's color will now be the default iOS / Android blue. */}
+        {/* <Button title="My Button" /> */}
+        <BadgeComponentPractice />
+    </ThemeProvider>
     </>
   );
 }

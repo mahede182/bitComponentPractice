@@ -39,6 +39,8 @@ import RefreshControllComponentPractice from './components/RefreshControllCompon
 import StatusBarComponentPractice from './components/StatusBarComponentPractice';
 import BgComponent from './components/ImageComponent/BgComponent';
 import PressableComponentPractice from './components/PressableComponent/PressableComponentPractice';
+import TouchableHighlightComponentPractice from './components/TouchableComponent/TouchableHighlightComponentPractice';
+import VirtualizedListComponent from './components/TouchableComponent/VirtualizedListComponentPractice';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -67,7 +69,9 @@ function App(): JSX.Element {
       {/* <RefreshControllComponentPractice /> */}
       {/* <StatusBarsComponentPractice /> */}
       {/* <BgComponent /> */}
-      <PressableComponentPractice />
+      {/* <PressableComponentPractice /> */}
+      {/* <TouchableHighlightComponentPractice /> */}
+      <VirtualizedListComponent />
     </>
   );
 }

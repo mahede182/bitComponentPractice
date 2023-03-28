@@ -1,8 +1,11 @@
 import React, {useState} from 'react';
-import {Pressable, StyleSheet, Text, View} from 'react-native';
+import {Pressable, StyleSheet, Text, View, Switch} from 'react-native';
 
 const PressableComponentPractice = () =>{
 const [timesPressed, setTimesPressed] = useState(0);
+const [isEnabled, setIsEnabled] = useState(false);
+
+const toggleSwitch = () => setIsEnabled(previousState => !previousState);
 
   let textLog = '';
     if (timesPressed > 1) {
@@ -14,6 +17,13 @@ const [timesPressed, setTimesPressed] = useState(0);
     return (
 <>
     <View style={styles.container}>
+        <Switch
+            trackColor={{false: '#767577', true: '#81b0ff'}}
+            thumbColor={isEnabled ? '#f5dd4b' : '#f4f3f4'}
+            ios_backgroundColor="#3e3e3e"
+            onValueChange={toggleSwitch}
+            value={isEnabled}
+        />
         <Pressable
         onPress={() => {
             setTimesPressed(current => current + 1);

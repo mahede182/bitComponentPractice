@@ -38,6 +38,7 @@ import ModalComponentPractice from './components/ModalComponentPractice';
 import RefreshControllComponentPractice from './components/RefreshControllComponentPractice';
 import StatusBarComponentPractice from './components/StatusBarComponentPractice';
 import BgComponent from './components/ImageComponent/BgComponent';
+import PressableComponentPractice from './components/PressableComponent/PressableComponentPractice';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -64,8 +65,9 @@ function App(): JSX.Element {
       {/* <TextInputComponentPractice /> */}
       {/* <ModalComponentPractice /> */}
       {/* <RefreshControllComponentPractice /> */}
-      {/* <StatusBarComponentPractice /> */}
-      <BgComponent />
+      {/* <StatusBarsComponentPractice /> */}
+      {/* <BgComponent /> */}
+      <PressableComponentPractice />
     </>
   );
 }

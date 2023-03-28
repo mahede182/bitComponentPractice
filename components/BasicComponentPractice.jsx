@@ -18,7 +18,7 @@ function BasicComponentPractice(){
             <Text style={styles.heading}>Image - Component</Text>
             <Text>A component for displaying image</Text>
             
-            <Image source = {require('P:/bit/images/logo.png')} style = {{ width: 100, height: 100}}/>
+            <Image source = {require('./images/logo.png')} style = {{ width: 100, height: 100}}/>
         </View>
         {/* ======Text input==== */}
         <View style={styles.cardContainer}>

@@ -37,6 +37,7 @@ import TextInputComponentPractice from './components/TextInputComponentPractice'
 import ModalComponentPractice from './components/ModalComponentPractice';
 import RefreshControllComponentPractice from './components/RefreshControllComponentPractice';
 import StatusBarComponentPractice from './components/StatusBarComponentPractice';
+import BgComponent from './components/ImageComponent/BgComponent';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -55,7 +56,7 @@ function App(): JSX.Element {
       {/* <UserInterfacePractice /> */}
       {/* <ListViewComponentPractice /> */}
       {/* <DrawerComponentPractice /> */}
-      <PermissionComponentPractice />
+      {/* <PermissionComponentPractice /> */}
       {/* <ToastComponentPractice /> */}
       {/* <ActivityIndicatorComponentPractice /> */}
       {/* <AnimationComponentPractice /> */}
@@ -64,6 +65,7 @@ function App(): JSX.Element {
       {/* <ModalComponentPractice /> */}
       {/* <RefreshControllComponentPractice /> */}
       {/* <StatusBarComponentPractice /> */}
+      <BgComponent />
     </>
   );
 }
